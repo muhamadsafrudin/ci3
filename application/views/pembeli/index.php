@@ -1,6 +1,6 @@
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Tabel Data Produk</h3><br>
+                <h3 class="card-title">Tabel Data Pembeli</h3><br>
                 <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-lg"><i class="fas fa-plus"></i> Tambah Data</button>
               </div>
          
