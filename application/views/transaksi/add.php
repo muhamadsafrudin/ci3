@@ -5,7 +5,7 @@
     </div>
     <div class="card-body row justify-content-center">
         <div class="col-md-5 ">
-            <form class="" action="" method="POST" role="form" >
+            <form class="" action="<?=site_url()?>transaksi/add" method="POST" role="form" >
                   <div class="form-group">  
                       <label>Tanggal </label>
                       <input class="form-control" type="text" value="<?php echo date('d-M-Y')?>" disabled>
@@ -14,7 +14,7 @@
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label>Product *</label>
-                      <select name="product_id" id="produc" class="form-control">
+                      <select name="product_id" id="produc" class="form-control" required>
                         <option value=""></option>
                         <?php foreach($product as $pro) {;?>
                         <?php if($pro->stok > 0 ){; ?>
@@ -24,12 +24,12 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="">Jumlah barang  *</label>
-                        <input class="form-control" type="number" min="1" name="jumlah" value="" placeholder="jumlah..">
+                        <input class="form-control" type="number" min="1" name="jumlah" value="" placeholder="jumlah.." required>
                     </div>
                   </div>         
                   <div class="form-group">
                     <label>Pembeli *</label>
-                    <select name="pembeli_id" id="pembel" class="select   form-control"> 
+                    <select name="pembeli_id" id="pembel" class="select   form-control" required> 
                       <option value=""></option> 
                       <?php foreach($pembeli as $pem) {;?>
                         <option value="<?=$pem->id_pembeli?>"><?=$pem->nama?></option>
@@ -38,7 +38,7 @@
                   </div>
                     <div class="form-group">
                       <label for="">Keterangan </label>
-                      <textarea name="keterangan" class="form-control" id="" rows="3"></textarea>
+                      <textarea name="keterangan" class="form-control" id="" rows="3" required></textarea>
                     </div>  
                   <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-paper-plane"></i> Submit</button>
